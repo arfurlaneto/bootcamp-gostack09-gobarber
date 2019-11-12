@@ -6,6 +6,11 @@ Aplicação desenvolvida durante o Bootcamp GoStack da Rocketseat
 - `docker run --name mongobarber -p 27017:27017 -d -t mongo`
 - `docker run --name redisbarber -p 6379:6379 -d -t redis:alpine`
 - criar arquivo .env
+- `yarn` to install dependencies
 - `yarn sequelize db:migrate`
 - `yarn run dev`
 - `yarn run queue`
+
+## front-end
+- `yarn` to install dependencies
+- `yarn start`
