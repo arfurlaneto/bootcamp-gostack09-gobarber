@@ -1,16 +1,13 @@
-import React from 'react';
-import { SafeAreaView, ScrollView, StatusBar } from 'react-native';
+import 'react-native-gesture-handler';
 
-import Teste from '~/Teste';
+import React from 'react';
+
+import Routes from './routes';
 
 const App = () => {
   return (
     <>
-      <StatusBar />
-      <SafeAreaView>
-        <ScrollView />
-        <Teste />
-      </SafeAreaView>
+      <Routes />
     </>
   );
 };
