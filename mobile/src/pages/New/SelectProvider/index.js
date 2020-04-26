@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { TouchableOpacity, Text } from 'react-native';
+import { TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import api from '~/services/api';
@@ -30,7 +30,7 @@ export default function SelectProvider({ navigation }) {
           renderItem={({ item }) => (
             <Provider
               onPress={() => {
-                navigation.navigate('SelectDateTime', { item });
+                navigation.navigate('SelectDateTime', { provider: item });
               }}
             >
               <Avatar
