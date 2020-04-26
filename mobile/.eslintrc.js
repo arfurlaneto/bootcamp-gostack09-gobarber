@@ -10,7 +10,8 @@ module.exports = {
     ],
     "globals": {
         "Atomics": "readonly",
-        "SharedArrayBuffer": "readonly"
+        "SharedArrayBuffer": "readonly",
+        "__DEV__": "readonly"
     },
     "parser": "babel-eslint",
     "parserOptions": {
@@ -33,7 +34,8 @@ module.exports = {
         }
       ],
       "import/prefer-default-export": "off",
-      "react/jsx-props-no-spreading": "off"
+      "react/jsx-props-no-spreading": "off",
+      "camelcase": "off"
     },
     "settings": {
       "import/resolver": {
