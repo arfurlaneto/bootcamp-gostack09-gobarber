@@ -11,7 +11,7 @@ You will need Postgres, Mongo and Redis instances. You can setup them all with d
   docker run --name redisbarber -p 6379:6379 -d -t redis:alpine
 ```
 Open `backend` folder and create a `.env`file. You can use `.env.example` as an example.
-Edit your `.env`file and add the configuration for your postgres, mongo and redis instances.
+Edit it and add the configuration for your postgres, mongo and redis instances.
 You will need some SMTP configurations as well. For tests, you can use https://mailtrap.io/.
 If you want to use sentry (https://sentry.io/), set the SENTRY_DNS too.
 
