@@ -6,9 +6,9 @@ A barber appointment app developed at Rocketseat's GoStack Bootcamp.
 ## back-end
 You will need Postgres, Mongo and Redis instances. You can setup them all with docker:
 ```
-  docker run --name postgresbarber -e POSTGRES_DB=gobarber -e POSTGRES_PASSWORD=docker -p 5432:5432 -d -t postgres:11
-  docker run --name mongobarber -p 27017:27017 -d -t mongo
-  docker run --name redisbarber -p 6379:6379 -d -t redis:alpine
+docker run --name postgresbarber -e POSTGRES_DB=gobarber -e POSTGRES_PASSWORD=docker -p 5432:5432 -d -t postgres:11
+docker run --name mongobarber -p 27017:27017 -d -t mongo
+docker run --name redisbarber -p 6379:6379 -d -t redis:alpine
 ```
 Open `backend` folder and create a `.env`file. You can use `.env.example` as an example.
 Edit it and add the configuration for your postgres, mongo and redis instances.
@@ -22,11 +22,11 @@ yarn sequelize db:migrate
 ```
 Start the back-end:
 ```
-  yarn run dev
+ yarn run dev
 ```
 Start the mail queue:
 ```
-  yarn run queue
+ yarn run queue
 ```
 Back-end will be running at port 3333. You can call it directly with Insomnia (`insomnia.json` at repository root).
 
@@ -48,13 +48,13 @@ Open `mobile` folder and edit `src/services/api.js`. Change the axios `baseURL`,
 
 Install the dependencies:
 ```
-    yarn
+yarn
 ```
 The first time you run it:
 ```
-  yarn run android
+yarn run android
 ```
 The subsequent times:
 ```
-  yarn run start
+yarn run start
  ```
