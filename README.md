@@ -12,7 +12,7 @@ You will need Postgres, Mongo and Redis instances. You can setup them all with d
 ```
 Open `backend` folder and create a `.env`file. You can use `.env.example` as an example.
 Edit it and add the configuration for your postgres, mongo and redis instances.
-You will need some SMTP configurations as well. For tests, you can use https://mailtrap.io/.
+You will need some SMTP configurations as well, for tests, you can use https://mailtrap.io/.
 If you want to use sentry (https://sentry.io/), set the SENTRY_DNS too.
 
 Install the dependencies and run the database migrations:
