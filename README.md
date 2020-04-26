@@ -3,12 +3,23 @@ A barber appointment app developed at Rocketseat's GoStack Bootcamp.
 ![Screenshot](/.github/general_01.png)
 
 # Main Technologies
-- Databases: Postgres (transactional data); MongoDB (notifications history); Redis (mail queue)
-- Back-end: Node JS; Expresss
-- Front-end: React JS
-- Mobile: React Native; Redux
+*Databases*
+- Postgres (transactional data)
+- MongoDB (notifications history)
+- Redis (mail queue)
 
-# How To Run
+*Back-end*
+- Node JS
+- Expresss
+
+*Front-end*
+- React JS
+
+*Mobile*
+- React Native
+- Redux
+
+## How To Run
 
 ## back-end
 You will need Postgres, Mongo and Redis instances. You can setup them all with docker:
