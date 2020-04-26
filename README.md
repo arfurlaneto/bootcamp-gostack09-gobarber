@@ -1,5 +1,6 @@
 # GoBarber
 A barber appointment app developed at Rocketseat's GoStack Bootcamp.
+![Screenshot](/.github/general_01.png)
 
 # How To Run
 
@@ -58,3 +59,12 @@ The subsequent times:
 ```
 yarn run start
  ```
+ 
+# More Screenshots
+<p align="center">
+<img src="/.github/mobile_01.png" width="300">
+<img src="/.github/mobile_04.png" width="300">
+<img src="/.github/mobile_05.png" width="300">
+<img src="/.github/mobile_06.png" width="300">
+<img src="/.github/web_03.png" width="600">
+</p>
