@@ -10,7 +10,7 @@ You will need Postgres, Mongo and Redis instances. You can setup them all with d
   docker run --name mongobarber -p 27017:27017 -d -t mongo
   docker run --name redisbarber -p 6379:6379 -d -t redis:alpine
 ```
-Open `backend` folder and create a `.env`file. You can use `.env.example` as a example.
+Open `backend` folder and create a `.env`file. You can use `.env.example` as an example.
 Edit your `.env`file and add the configuration for your postgres, mongo and redis instances.
 You will need some SMTP configurations as well. For tests, you can use https://mailtrap.io/.
 If you want to use sentry (https://sentry.io/), set the SENTRY_DNS too.
@@ -41,8 +41,8 @@ yarn start
 Front-end will be running at port 3000.
 
 ## mobile
-This project was developed in Windows. Some of the iOS specific configurations was not applied.
-Before run the project, start an emulator or connect a device to your computer.
+This project was developed on Windows. Some of the iOS specific configurations were not applied.
+Before running the project, start an emulator or connect a device to your computer.
 
 Install the dependencies:
 ```
