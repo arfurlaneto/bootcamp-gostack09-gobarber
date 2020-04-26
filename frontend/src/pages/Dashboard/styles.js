@@ -33,6 +33,9 @@ export const Container = styled.div`
 `;
 
 export const Time = styled.li`
+  display: flex;
+  justify-content: space-between;
+
   padding: 20px;
   border-radius: 4px;
   background: #fff;

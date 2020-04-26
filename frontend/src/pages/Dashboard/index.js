@@ -7,6 +7,7 @@ import {
   setHours,
   setMinutes,
   setSeconds,
+  setMilliseconds,
   isBefore,
   isEqual,
   parseISO,
@@ -15,7 +16,7 @@ import {
 import { utcToZonedTime } from 'date-fns-tz';
 import pt from 'date-fns/locale/pt';
 
-import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
+import { MdChevronLeft, MdChevronRight, MdFace } from 'react-icons/md';
 
 import api from '~/services/api';
 
@@ -39,7 +40,10 @@ export default function Dashboard() {
       const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
       const data = range.map(hour => {
-        const checkDate = setSeconds(setMinutes(setHours(date, hour), 0), 0);
+        const checkDate = setMilliseconds(
+          setSeconds(setMinutes(setHours(date, hour), 0), 0),
+          0
+        );
         const compareDate = utcToZonedTime(checkDate, timezone);
 
         return {
@@ -80,10 +84,15 @@ export default function Dashboard() {
       <ul>
         {schedule.map(time => (
           <Time key={time.time} past={time.past} availabe={!time.appointment}>
-            <strong>{time.time}</strong>
-            <span>
-              {time.appointment ? time.appointment.user.name : 'Em aberto'}
-            </span>
+            <div>
+              <strong>{time.time}</strong>
+              <span>
+                {time.appointment ? time.appointment.user.name : 'Em aberto'}
+              </span>
+            </div>
+            <div>
+              {time.appointment && <MdFace size={40} color="#7159c1" />}
+            </div>
           </Time>
         ))}
       </ul>

@@ -36,9 +36,11 @@ export function* signUp({ payload }) {
 
     yield call(api.post, 'users', { name, email, password, provider: true });
 
+    toast.success('Sucesso do cadastro! Você já pode fazer login.');
+
     history.push('/');
   } catch (err) {
-    toast.error('Falha no cadsatro, verifique seus dados.');
+    toast.error('Falha no cadastro, verifique seus dados.');
     yield put(signFailure());
   }
 }

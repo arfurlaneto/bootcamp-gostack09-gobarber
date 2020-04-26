@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useField } from '@rocketseat/unform';
-import api from '~/services/api';
+import api, { baseURLify } from '~/services/api';
 
 import { Container } from './styles';
 
@@ -42,7 +42,8 @@ export default function AvatarInput({ name }) {
       <label htmlFor="avatar">
         <img
           src={
-            preview || 'https://api.adorable.io/avatars/50/abott@adorable.png'
+            (preview && baseURLify(preview)) ||
+            'https://api.adorable.io/avatars/50/abott@adorable.png'
           }
           alt="User Avatar"
         />
