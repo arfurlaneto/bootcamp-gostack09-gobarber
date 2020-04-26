@@ -14,6 +14,7 @@ A barber appointment app developed at Rocketseat's GoStack Bootcamp.
 
 *Front-end*
 - React JS
+- Redux
 
 *Mobile*
 - React Native
