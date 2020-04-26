@@ -44,6 +44,8 @@ Front-end will be running at port 3000.
 This project was developed on Windows. Some of the iOS specific configurations were not applied.
 Before running the project, start an emulator or connect a device to your computer.
 
+Open `mobile` folder and edit `src/services/api.js`. Change the axios `baseURL`, if you need.
+
 Install the dependencies:
 ```
     yarn
