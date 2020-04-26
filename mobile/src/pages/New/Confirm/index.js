@@ -6,7 +6,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import { TouchableOpacity } from 'react-native';
 
-import api from '~/services/api';
+import api, { baseURLify } from '~/services/api';
 
 import Background from '~/components/Background';
 
@@ -40,7 +40,7 @@ export default function SelectDateTime({ navigation }) {
         <Avatar
           source={{
             uri: provider.avatar
-              ? provider.avatar.url
+              ? baseURLify(provider.avatar.url)
               : `https://api.adorable.io/avatar/50/${provider.name}.png`,
           }}
         />

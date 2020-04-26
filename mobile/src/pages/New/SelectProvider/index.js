@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-import api from '~/services/api';
+import api, { baseURLify } from '~/services/api';
 
 import Background from '~/components/Background';
 
@@ -36,7 +36,7 @@ export default function SelectProvider({ navigation }) {
               <Avatar
                 source={{
                   uri: item.avatar
-                    ? item.avatar.url
+                    ? baseURLify(item.avatar.url)
                     : `https://api.adorable.io/avatar/50/${item.name}.png`,
                 }}
               />

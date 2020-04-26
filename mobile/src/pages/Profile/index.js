@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
+import { withNavigationFocus } from 'react-navigation';
 import { useDispatch, useSelector } from 'react-redux';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
@@ -16,7 +17,7 @@ import {
   LogoutButton,
 } from './styles';
 
-export default function Profile() {
+function Profile({ isFocused }) {
   const dispatch = useDispatch();
   const profile = useSelector((state) => state.user.profile);
 
@@ -30,6 +31,16 @@ export default function Profile() {
   const [oldPassword, setOldPassword] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+
+  useEffect(() => {
+    if (isFocused) {
+      setName(profile.name);
+      setEmail(profile.email);
+      setOldPassword('');
+      setPassword('');
+      setConfirmPassword('');
+    }
+  }, [isFocused]);
 
   useEffect(() => {
     setOldPassword('');
@@ -133,3 +144,5 @@ Profile.navigationOptions = {
     <Icon name="person" size={20} color={tintColor} />
   ),
 };
+
+export default withNavigationFocus(Profile);
