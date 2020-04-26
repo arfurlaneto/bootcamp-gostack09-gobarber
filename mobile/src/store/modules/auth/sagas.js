@@ -2,6 +2,7 @@ import { Alert } from 'react-native';
 import { takeLatest, call, put, all } from 'redux-saga/effects';
 
 import api from '~/services/api';
+import NavigationService from '~/services/navigation';
 
 import { signInSuccess, signFailure } from './actions';
 
@@ -36,7 +37,9 @@ export function* signUp({ payload }) {
 
     yield call(api.post, 'users', { name, email, password, provider: false });
 
-    // history.push('/');
+    Alert.alert('Cadastro criado com sucesso! Você já pode fazer o login.');
+
+    NavigationService.navigate('SignIn');
   } catch (err) {
     Alert.alert(
       'Falha na autenticação',
