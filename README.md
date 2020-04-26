@@ -4,7 +4,7 @@ A barber appointment app developed at Rocketseat's GoStack Bootcamp.
 # How To Run
 
 ## back-end
-You will need Postgres, Mongo and Redis intances. You can setup them all with docker:
+You will need Postgres, Mongo and Redis instances. You can setup them all with docker:
 ```
   docker run --name postgresbarber -e POSTGRES_DB=gobarber -e POSTGRES_PASSWORD=docker -p 5432:5432 -d -t postgres:11
   docker run --name mongobarber -p 27017:27017 -d -t mongo
@@ -15,7 +15,7 @@ Edit your `.env`file and add the configuration for your postgres, mongo and redi
 You will need some SMTP configurations as well. For tests, you can use https://mailtrap.io/.
 If you want to use sentry (https://sentry.io/), set the SENTRY_DNS too.
 
-Next, you install de dependencies and run the database migrations:
+Install the dependencies and run the database migrations:
 ```
 yarn
 yarn sequelize db:migrate
